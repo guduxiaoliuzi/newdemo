@@ -53,8 +53,13 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
+	date_default_timezone_set("Asia/Shanghai");
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+/* 路口文件路径 */
+define('WEB_PATH', dirname(__FILE__));
 
+ini_set('log_errors', 'On');//打开错误日志
+//ini_set('error_log', '/home/httpd/databank.api.cnfol.com/application/logs/php_error.log');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
